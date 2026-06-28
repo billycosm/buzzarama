@@ -1,0 +1,7 @@
+local function despawn_bullet()
+	go.delete()
+end
+
+function init(self)
+	timer.delay(1, false, despawn_bullet)
+end

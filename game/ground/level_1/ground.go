@@ -14,5 +14,7 @@ embedded_components {
   "mask: \"default\"\n"
   "mask: \"player\"\n"
   "mask: \"player_bullet\"\n"
+  "mask: \"enemy\"\n"
+  "mask: \"enemy_bullet\"\n"
   ""
 }

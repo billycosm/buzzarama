@@ -1,3 +1,7 @@
+components {
+  id: "bullet_despawn"
+  component: "/game/bullet_player/bullet_despawn.script"
+}
 embedded_components {
   id: "sprite"
   type: "sprite"
@@ -34,7 +38,7 @@ embedded_components {
   "    count: 1\n"
   "    id: \"bullet_collider\"\n"
   "  }\n"
-  "  data: 4.442382\n"
+  "  data: 21.24667\n"
   "}\n"
   "locked_rotation: true\n"
   "bullet: true\n"
