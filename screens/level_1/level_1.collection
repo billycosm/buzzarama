@@ -1,4 +1,33 @@
 name: "m"
+instances {
+  id: "enemy"
+  prototype: "/game/enemy/enemy.go"
+  position {
+    x: 373.6224
+    y: 372.48935
+  }
+}
+instances {
+  id: "player"
+  prototype: "/game/player/player.go"
+  children: "player_camera"
+  position {
+    x: 496.0
+    y: 287.0
+  }
+}
+instances {
+  id: "player_camera"
+  prototype: "/game/player_camera/player_camera.go"
+}
+instances {
+  id: "ground"
+  prototype: "/game/ground/ground.go"
+  position {
+    x: -286.0
+    y: 96.0
+  }
+}
 scale_along_z: 0
 embedded_instances {
   id: "monarch"
