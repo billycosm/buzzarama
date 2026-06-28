@@ -19,7 +19,6 @@ function update(self, dt)
 
 	if self.is_firing then
 		local mouse_direction = vmath.normalize(self.touch_pos - window_size / 2)
-		print(window_size, self.touch_pos)
 		local bullet = factory.create("#bullet_factory")
 		msg.post(bullet, "apply_force", {
 			force = mouse_direction * 3000,

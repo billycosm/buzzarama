@@ -8,6 +8,10 @@ embedded_components {
   "  texture: \"/assets/bullet_enemy.atlas\"\n"
   "}\n"
   ""
+  scale {
+    x: 0.2
+    y: 0.2
+  }
 }
 embedded_components {
   id: "collisionobject"
@@ -30,7 +34,7 @@ embedded_components {
   "    count: 1\n"
   "    id: \"bullet_collider\"\n"
   "  }\n"
-  "  data: 22.656\n"
+  "  data: 21.0\n"
   "}\n"
   "locked_rotation: true\n"
   "bullet: true\n"

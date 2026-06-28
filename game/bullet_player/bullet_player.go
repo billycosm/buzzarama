@@ -38,7 +38,7 @@ embedded_components {
   "    count: 1\n"
   "    id: \"bullet_collider\"\n"
   "  }\n"
-  "  data: 21.24667\n"
+  "  data: 21.0\n"
   "}\n"
   "locked_rotation: true\n"
   "bullet: true\n"
