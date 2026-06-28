@@ -1,0 +1,16 @@
+local monarch = require("monarch.monarch")
+local screens = require("scripts.app.screens")
+
+function init(self)
+	msg.post("#", "show_title")
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("show_title") then
+		monarch.show(screens.MENU)
+	end
+	monarch.on_message(message_id, message, sender)
+end
+
+function final(self)
+end
