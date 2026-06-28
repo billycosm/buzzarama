@@ -11,7 +11,7 @@ convex_hulls {
 convex_hulls {
   index: 0
   count: 4
-  collision_group: ""
+  collision_group: "default"
 }
 convex_hulls {
   index: 4

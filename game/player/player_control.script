@@ -1,7 +1,15 @@
+local window_size = vmath.vector3(
+	sys.get_config_int("display.width"),
+	sys.get_config_int("display.height"),
+	0
+)
+
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	self.vel = vmath.vector3()
 	self.SPEED = 200
+	self.is_firing = false
+	self.touch_pos = vmath.vector3(0)
 end
 
 function update(self, dt)
@@ -9,8 +17,19 @@ function update(self, dt)
 	pos = pos + self.vel * dt
 	go.set_position(pos)
 
+	if self.is_firing then
+		local mouse_direction = vmath.normalize(self.touch_pos - window_size / 2)
+		print(window_size, self.touch_pos)
+		local bullet = factory.create("#bullet_factory")
+		msg.post(bullet, "apply_force", {
+			force = mouse_direction * 3000,
+			position = pos
+		})
+	end
+
 	self.vel.x = 0
 	self.vel.y = 0
+	self.is_firing = false
 end
 
 function on_input(self, action_id, action)
@@ -22,5 +41,9 @@ function on_input(self, action_id, action)
 		self.vel.y = self.SPEED
 	elseif action_id == hash("down") then
 		self.vel.y = -self.SPEED
+	elseif action_id == hash("trigger") then
+		self.touch_pos.x = action.x
+		self.touch_pos.y = action.y
+		self.is_firing = true
 	end
 end

@@ -3,8 +3,8 @@ instances {
   id: "enemy"
   prototype: "/game/enemy/enemy.go"
   position {
-    x: 373.6224
-    y: 372.48935
+    x: 1402.6224
+    y: 246.48935
   }
 }
 instances {
@@ -12,8 +12,8 @@ instances {
   prototype: "/game/player/player.go"
   children: "player_camera"
   position {
-    x: 496.0
-    y: 287.0
+    x: 1607.0
+    y: 1217.0
   }
 }
 instances {
@@ -22,10 +22,43 @@ instances {
 }
 instances {
   id: "ground"
-  prototype: "/game/ground/ground.go"
+  prototype: "/game/ground/level_1/ground.go"
   position {
-    x: -286.0
-    y: 96.0
+    x: 38.0
+    y: 30.0
+    z: -0.5
+  }
+}
+instances {
+  id: "enemy1"
+  prototype: "/game/enemy/enemy.go"
+  position {
+    x: 1249.6224
+    y: 636.4894
+  }
+}
+instances {
+  id: "enemy2"
+  prototype: "/game/enemy/enemy.go"
+  position {
+    x: 774.6224
+    y: 892.4894
+  }
+}
+instances {
+  id: "enemy3"
+  prototype: "/game/enemy/enemy.go"
+  position {
+    x: 430.6224
+    y: 869.4894
+  }
+}
+instances {
+  id: "enemy4"
+  prototype: "/game/enemy/enemy.go"
+  position {
+    x: 430.6224
+    y: 185.48935
   }
 }
 scale_along_z: 0
