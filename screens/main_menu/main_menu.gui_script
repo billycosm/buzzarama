@@ -1,20 +1,34 @@
 local monarch = require "monarch.monarch"
+local druid = require("druid.druid")
+local screens = require("scripts.app.screens")
+
+local function callback_new_game(self)
+    monarch.show(screens.GAMEPLAY)
+end
+
+local function callback_quit_game(self)
+    os.exit()
+end
 
 function init(self)
-    msg.post(".", "acquire_input_focus")
+    self.druid = druid.new(self)
+    -- You can use the node_id instead of gui.get_node():
+    self.b_newgame = self.druid:new_button("b_newgame", callback_new_game)
+    self.b_quit = self.druid:new_button("b_quit", callback_quit_game)
 end
 
 function final(self)
+    self.druid:final()
 end
 
 function update(self, dt)
+    self.druid:update(dt)
 end
 
 function on_message(self, message_id, message, sender)
+    self.druid:on_message(message_id, message, sender)
 end
 
 function on_input(self, action_id, action)
-end
-
-function on_reload(self)
+    return self.druid:on_input(action_id, action)
 end
