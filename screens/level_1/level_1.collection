@@ -19,6 +19,9 @@ instances {
 instances {
   id: "player_camera"
   prototype: "/game/player_camera/player_camera.go"
+  position {
+    z: 1.0
+  }
 }
 instances {
   id: "ground"

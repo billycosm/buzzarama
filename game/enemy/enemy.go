@@ -8,6 +8,9 @@ embedded_components {
   "  texture: \"/assets/enemy.atlas\"\n"
   "}\n"
   ""
+  position {
+    z: 0.2
+  }
 }
 embedded_components {
   id: "collisionobject"

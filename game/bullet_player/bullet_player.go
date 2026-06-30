@@ -12,6 +12,9 @@ embedded_components {
   "  texture: \"/assets/bullet_player.atlas\"\n"
   "}\n"
   ""
+  position {
+    z: 0.5
+  }
   scale {
     x: 0.2
     y: 0.2

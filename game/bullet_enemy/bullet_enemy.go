@@ -8,6 +8,9 @@ embedded_components {
   "  texture: \"/assets/bullet_enemy.atlas\"\n"
   "}\n"
   ""
+  position {
+    z: 0.8
+  }
   scale {
     x: 0.2
     y: 0.2

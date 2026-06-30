@@ -2,6 +2,13 @@ components {
   id: "ground"
   component: "/game/ground/level_1/ground.tilemap"
 }
+components {
+  id: "ground_viz"
+  component: "/game/ground/level_1/ground_viz.tilemap"
+  position {
+    z: 0.1
+  }
+}
 embedded_components {
   id: "collisionobject"
   type: "collisionobject"
