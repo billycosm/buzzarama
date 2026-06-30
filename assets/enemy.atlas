@@ -1,4 +1,7 @@
 images {
   image: "/assets/images/enemy_64_64.png"
 }
+images {
+  image: "/assets/images/bot_sketch_64_64.png"
+}
 extrude_borders: 2
