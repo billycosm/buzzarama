@@ -12,6 +12,9 @@ function init(self)
 	self.touch_pos = vmath.vector3(0)
 end
 
+-- I've added bee directional sprites to the atlas
+-- so we can now check direction and set directional sprite if we want.
+
 function update(self, dt)
 	local pos = go.get_position()
 	pos = pos + self.vel * dt

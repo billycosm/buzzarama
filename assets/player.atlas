@@ -1,4 +1,25 @@
 images {
   image: "/assets/images/player_64_64.png"
 }
+animations {
+  id: "bee_down_64_64"
+  images {
+    image: "/assets/images/bee_down_64_64.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+}
+animations {
+  id: "bee_right_64_64"
+  images {
+    image: "/assets/images/bee_right_64_66.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+}
+animations {
+  id: "bee_up_64_64"
+  images {
+    image: "/assets/images/bee_up_64_64.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+}
 extrude_borders: 2
